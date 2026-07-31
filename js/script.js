@@ -133,21 +133,25 @@ photos.forEach(video => {
 
 const heartsContainer = document.querySelector(".floating-hearts");
 
-for(let i=0;i<35;i++){
+if (heartsContainer) {
 
-    const heart=document.createElement("span");
+    for (let i = 0; i < 35; i++) {
 
-    heart.innerHTML=Math.random()>0.5?"❤":"🌸";
+        const heart = document.createElement("span");
 
-    heart.style.left=Math.random()*100+"%";
+        heart.innerHTML = Math.random() > 0.5 ? "❤" : "🌸";
 
-    heart.style.animationDuration=(6+Math.random()*8)+"s";
+        heart.style.left = Math.random() * 100 + "%";
 
-    heart.style.fontSize=(14+Math.random()*18)+"px";
+        heart.style.animationDuration = (6 + Math.random() * 8) + "s";
 
-    heart.style.animationDelay=Math.random()*5+"s";
+        heart.style.fontSize = (14 + Math.random() * 18) + "px";
 
-    heartsContainer.appendChild(heart);
+        heart.style.animationDelay = Math.random() * 5 + "s";
+
+        heartsContainer.appendChild(heart);
+
+    }
 
 }
 
