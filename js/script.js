@@ -47,7 +47,7 @@ document.querySelector("#open-heart").onclick = () => {
     heartBurst(innerWidth/2, innerHeight/2, 200);
 
     document.querySelector(".surprise-card h2").innerHTML =
-    `I Love You<br><em>Anjali ❤️</em>`;
+    `I Love You<br><em>Prachi ❤️</em>`;
 
     document.querySelector(".surprise-card p").innerHTML =
     "Thank you for making my life beautiful.";
