@@ -69,17 +69,6 @@ opacity:.35;
 }
 
 
-.photo-card video{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-    display:block;
-    transition:.5s;
-}
-
-.photo-card:hover video{
-    transform:scale(1.08);
-}
 
 .video-viewer{
     position:fixed;
@@ -119,4 +108,37 @@ opacity:.35;
 
 .gallery-item:hover video{
     transform:scale(1.08);
+}
+
+.photo-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:18px;
+    background:#111;
+    cursor:pointer;
+    aspect-ratio:9/16;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+.photo-card video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.photo-card:hover video{
+    transform:scale(1.08);
+}
+
+.caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:12px;
+    color:#fff;
+    font-size:14px;
+    background:linear-gradient(transparent,rgba(0,0,0,.75));
 }
