@@ -139,13 +139,15 @@ if (heartsContainer) {
 
         const heart = document.createElement("span");
 
-        heart.innerHTML = Math.random() > 0.5 ? "❤" : "🌸";
+        const icons = ["❤️","🌸","💖","🌺","💕","✨","🩷"];
+
+heart.innerHTML = icons[Math.floor(Math.random()*icons.length)];
 
         heart.style.left = Math.random() * 100 + "%";
 
-        heart.style.animationDuration = (6 + Math.random() * 8) + "s";
+        heart.style.animationDuration = (10 + Math.random() * 8) + "s";
 
-        heart.style.fontSize = (14 + Math.random() * 18) + "px";
+        heart.style.fontSize = (18 + Math.random() * 20) + "px";
 
         heart.style.animationDelay = Math.random() * 5 + "s";
 
