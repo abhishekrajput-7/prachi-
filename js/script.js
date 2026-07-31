@@ -1,5 +1,5 @@
 /* Personalize this date and the letter text below. */
-const relationshipStart = new Date("2024-04-23T00:00:00");
+const relationshipStart = new Date("2025-12-31T00:00:00");
 const letter = `My love,\n\nYou have a way of turning ordinary moments into the kind I never want to forget. Thank you for being the warmth in my days, the calm in my storms, and the most beautiful part of my story.\n\nI choose you—in every lifetime, in every little moment, and in every tomorrow.`;
 
 document.querySelectorAll('.reveal').forEach((el, i) => setTimeout(() => el.classList.add('visible'), 180 + i * 130));
