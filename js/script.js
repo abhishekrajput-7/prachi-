@@ -63,27 +63,73 @@ const canvas=document.querySelector('#heart-canvas'),ctx=canvas.getContext('2d')
 const glow=document.querySelector('.cursor-glow');addEventListener('mousemove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});
 
 
-const photos = document.querySelectorAll(".photo-card img");
-const viewer = document.getElementById("photoViewer");
-const viewerImg = document.getElementById("viewerImg");
-const closeViewer = document.getElementById("closeViewer");
+const photos = document.querySelectorAll(".photo-card video");
 
-photos.forEach(photo=>{
-    photo.addEventListener("click",()=>{
-        viewer.style.display="flex";
-        viewerImg.src=photo.src;
+const videoViewer = document.getElementById("videoViewer");
+const viewerVideo = document.getElementById("viewerVideo");
+const closeVideo = document.getElementById("closeVideo");
+
+photos.forEach(video => {
+
+    video.addEventListener("click", () => {
+
+        videoViewer.style.display = "flex";
+
+        viewerVideo.src = video.querySelector("source").src;
+
+        viewerVideo.load();
+
+        viewerVideo.play();
+
     });
+
 });
 
-closeViewer.onclick=()=>{
-    viewer.style.display="none";
-}
+closeVideo.onclick = () => {
 
-viewer.onclick=(e)=>{
-    if(e.target===viewer){
-        viewer.style.display="none";
+    viewerVideo.pause();
+
+    viewerVideo.src = "";
+
+    videoViewer.style.display = "none";
+
+};
+
+videoViewer.onclick = (e) => {
+
+    if (e.target === videoViewer) {
+
+        viewerVideo.pause();
+
+        viewerVideo.src = "";
+
+        videoViewer.style.display = "none";
+
     }
-}
+
+};
+
+photos.forEach(video => {
+
+    video.pause();
+
+    video.addEventListener("mouseenter", () => {
+
+        video.play();
+
+    });
+
+    video.addEventListener("mouseleave", () => {
+
+        video.pause();
+
+        video.currentTime = 0;
+
+    });
+
+});
+
+
 
 const heartsContainer = document.querySelector(".floating-hearts");
 
