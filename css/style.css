@@ -194,3 +194,33 @@ opacity:.35;
     font-size:18px;
     color:#fff;
 }
+
+.loader-content{
+    text-align:center;
+}
+
+.loader-heart{
+    font-size:55px;
+    animation:heartbeat 1s infinite;
+}
+
+.loader-bar{
+    width:320px;
+    height:6px;
+    background:rgba(255,255,255,.12);
+    border-radius:999px;
+    overflow:hidden;
+    margin:25px auto 15px;
+}
+
+#loaderProgress{
+    display:block;
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#ff8db1,#ffd6e7);
+}
+
+#loaderPercent{
+    font-size:18px;
+    color:#fff;
+}
