@@ -142,3 +142,55 @@ opacity:.35;
     font-size:14px;
     background:linear-gradient(transparent,rgba(0,0,0,.75));
 }
+
+/* ================= LOADER ================= */
+
+#loader{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background:#0b0b0b;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+    overflow:hidden;
+}
+
+#loader.hidden{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:.8s;
+}
+
+#loader h1{
+    margin:0;
+    text-align:center;
+}
+
+#loaderProgress{
+    width:320px;
+    height:4px;
+    background:rgba(255,255,255,.15);
+    border-radius:999px;
+    overflow:hidden;
+    margin-top:25px;
+}
+
+#loaderProgress span{
+    display:block;
+    width:0%;
+    height:100%;
+    background:#f3b4c4;
+    transition:.2s;
+}
+
+#loaderPercent{
+    margin-top:12px;
+    font-size:18px;
+    color:#fff;
+}
